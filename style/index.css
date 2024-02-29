@@ -114,6 +114,7 @@ article a {
   height: 12rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-link-bloc {
@@ -125,9 +126,64 @@ article a {
   display: inline-block;
 }
 
-.hero {
+.profil-bloc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10rem;
+}
+
+header {
   height: 133rem;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-self: start;
+}
+
+.social-media-bloc,
+.proposition-value-bloc,
+.progress-bloc {
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media-bloc {
+  align-self: baseline;
+  justify-content: center;
+  align-items: self-end;
+  height: 400px;
+}
+
+.social-media-bloc > * {
+  padding: 10px 0;
+}
+
+.social-media-bloc img {
+  width: 2.45rem;
+}
+
+.follow {
+  writing-mode: vertical-lr;
+  letter-spacing: 0.2rem;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.proposition-value-bloc {
+  width: 50vw;
+}
+
+.proposition-value-bloc p {
+  font-size: 8.8rem;
+  font-family: "Chronicle Display", sans-serif;
+  font-weight: 300;
+  line-height: 9.5rem;
+}
+
+.arrow-down {
+  width: 16px;
 }
 
 main {
