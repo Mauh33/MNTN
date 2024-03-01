@@ -1,0 +1,39 @@
+@import "./variables";
+
+%font-logo {
+  font-family: $fontFamily-secondary;
+  font-weight: $ft-w-bold;
+  font-size: $ft-lg;
+}
+
+%num-article {
+  font-weight: $ft-w-bold;
+  font-size: $ft-xxxl;
+  color: $font-transparent;
+}
+
+%h2-style {
+  font-weight: $ft-w-extraBold;
+  color: $accent;
+}
+
+%h3-style {
+  font-family: $fontFamily-secondary;
+  font-weight: $ft-w-semiBold;
+  font-size: $ft-xl;
+}
+
+%h4-style {
+  font-weight: $ft-w-bold;
+  color: $accent;
+  font-size: $ft-md;
+}
+
+%article-img {
+  width: 56.6rem;
+  height: 72rem;
+}
+
+%linear-style {
+  background: linear-gradient(to bottom, $linear-start, $linear-end);
+}

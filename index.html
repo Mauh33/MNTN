@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <script type="module" src="/main.js"></script>
-    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/chronicle-display"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
+    />
+    <link rel="stylesheet" href="style/index.scss" />
     <title>MNTN</title>
   </head>
   <body>
-    <nav>
+    <nav class="navbar">
       <span>MNTN</span>
-      <ul>
+      <ul class="nav-link-bloc">
         <li class="nav-li">
           <a>Equipment </a>
         </li>
@@ -23,20 +31,21 @@
         </li>
       </ul>
       <div class="profil-bloc">
-        <img src="" alt="" />
+        <img src="./public/img/account_circle_24px.png" alt="" />
         <a href="">Account</a>
       </div>
     </nav>
     <header class="hero">
       <div class="social-media-bloc">
         <p class="follow">Follow us</p>
-        <img src="" alt="" class="instagram-img" />
-        <img src="" alt="" class="twitter-img" />
+        <img src="./public/img/instagram.png" alt="" class="instagram-img" />
+        <img src="./public/img/twitter.png" alt="" class="twitter-img" />
       </div>
       <div class="proposition-value-bloc">
         <h1>A Hiking Guide</h1>
         <p>Be Prepared For The Mountains And Beyond</p>
         <a href="">scroll down</a>
+        <img class="arrow-down" src="./public/img/arrow_down.png" alt="" />
       </div>
       <nav class="progress-bloc">
         <p>Start</p>
@@ -48,6 +57,7 @@
     <main>
       <section>
         <article>
+          <p class="number-article">01</p>
           <h2 id="first-article">GET STARTED</h2>
           <h3>What level of hiker are you ?</h3>
           <p>
@@ -62,6 +72,7 @@
           <img src="" alt="" />
         </article>
         <article>
+          <p class="number-article">02</p>
           <h2 id="second-article">HIKING ESSENTIALS</h2>
           <h3>Picking the right Hiking Gear!</h3>
           <p>
@@ -75,6 +86,7 @@
           <img src="" alt="" />
         </article>
         <article>
+          <p class="number-article">03</p>
           <h2 id="third-article">WHERE YOU GO IS THE KEY</h2>
           <h3>Understand Your Map & Timing</h3>
           <p>
@@ -96,7 +108,7 @@
         <p>Copyright 2023 MNTN, Inc. Terms & Privacy</p>
       </div>
       <nav>
-        <h5>More on The Blog</h5>
+        <h4>More on The Blog</h4>
         <ul>
           <li>
             <a href="">About MNTN</a>
@@ -116,7 +128,7 @@
         </ul>
       </nav>
       <nav>
-        <h5>More on MNTN</h5>
+        <h4>More on MNTN</h4>
         <ul>
           <li>
             <a href=""> The Team</a>
