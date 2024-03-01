@@ -52,6 +52,11 @@ a {
   color: $ft-color;
 }
 
+a:hover {
+  font-weight: 800;
+  transform: scale(1.1, 1.1);
+}
+
 li {
   list-style: none;
 }
@@ -65,6 +70,7 @@ h1 {
   font-weight: $ft-w-extraBold;
   color: $accent;
   font-size: $ft-sm;
+  flex-basis: 100%;
 }
 
 h2 {
@@ -121,26 +127,23 @@ span {
 }
 
 header {
-  height: 133rem;
-  position: relative;
+  height: 64rem;
   display: flex;
-  justify-content: space-between;
-  align-self: start;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .social-media-bloc,
-.proposition-value-bloc,
 .progress-bloc {
-  padding-top: 10rem;
   display: flex;
   flex-direction: column;
 }
 
 .social-media-bloc {
-  align-self: baseline;
   justify-content: center;
-  align-items: self-end;
-  height: 400px;
+  align-items: self-start;
+  height: 40rem;
+  width: 45rem;
 }
 
 .social-media-bloc > * {
@@ -158,18 +161,62 @@ header {
 }
 
 .proposition-value-bloc {
-  width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100rem;
 }
 
 .proposition-value-bloc p {
-  font-size: $ft-xxl;
+  font-size: $ft-xxxl;
   font-family: $fontFamily-secondary;
   font-weight: $ft-w-sm;
   line-height: 9.5rem;
+  margin-top: 3rem;
+}
+
+.proposition-value-bloc a {
+  display: inline-block;
+  width: 10rem;
+  height: 5rem;
+}
+
+.proposition-value-bloc a,
+.proposition-value-bloc img {
+  margin-top: 4rem;
 }
 
 .arrow-down {
   width: 16px;
+  height: 24px;
+}
+
+.arrow-down::after {
+  content: "";
+}
+
+.progress-bloc {
+  width: 10rem;
+  height: 24rem;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 4px solid rgb(222 229 224 / 55%);
+  position: fixed;
+  top: 29rem;
+  right: 4%;
+  z-index: 4;
+}
+
+.progress-bloc p,
+.progress-bloc a {
+  width: 100%;
+  text-align: end;
+  padding-right: 5rem;
+}
+
+.progress-bloc:nth-child(2):hover .progress-bloc::after {
+  content: "";
+  position: absolute;
+  border-right: 6px;
 }
 
 main {
