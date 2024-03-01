@@ -31,7 +31,7 @@ body {
   background-image: url("/public/img/Background\ picture\ copy.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 656vh;
+  height: 370vh;
   background-color: $background-color;
   color: $ft-color;
 }
@@ -73,6 +73,15 @@ h1 {
   flex-basis: 100%;
 }
 
+h1::before {
+  content: "";
+  display: inline-block;
+  width: 6rem;
+  height: 3px;
+  background-color: $accent;
+  position: absolute;
+}
+
 h2 {
   @extend %h2-style;
 }
@@ -93,6 +102,7 @@ article a {
 article a {
   color: $accent;
   font-weight: $ft-w-bold;
+  height: 30rem;
 }
 
 article img {
@@ -131,6 +141,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 70vh;
 }
 
 .social-media-bloc,
@@ -263,8 +274,9 @@ main::after {
   background: linear-gradient(to top, #0b1d26 10%, rgb(12 15 15 / 0%));
 }
 
-.number-article {
-  @extend %num-article;
+section {
+  width: 72vw;
+  margin: auto;
 }
 
 section:first-child {
@@ -272,8 +284,27 @@ section:first-child {
   position: relative;
 }
 
-/*
-footer {
+article {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20vh;
+}
+
+.article-text {
+  width: 632px;
+  height: 160px;
+}
+
+.number-article {
+  @extend %num-article;
+  position: absolute;
+}
+
+h2 {
+  flex-basis: 100%;
+}
+
+/* footer {
   position: sticky;
   bottom: 0;
   left: 0;
