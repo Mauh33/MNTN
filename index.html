@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script type="module" src="/main.js"></script>
     <link
       href="https://fonts.cdnfonts.com/css/chronicle-display"
       rel="stylesheet"
@@ -18,7 +17,7 @@
   </head>
   <body>
     <nav class="navbar">
-      <span>MNTN</span>
+      <span id="home">MNTN</span>
       <ul class="nav-link-bloc">
         <li class="nav-li">
           <a>Equipment </a>
@@ -48,7 +47,7 @@
         <img class="arrow-down" src="./public/img/arrow_down.png" alt="" />
       </div>
       <nav class="progress-bloc">
-        <p>Start</p>
+        <a href="#home">Start</a>
         <a href="#first-article">01</a>
         <a href="#second-article">02</a>
         <a href="#third-article">03</a>
@@ -142,5 +141,6 @@
         </ul>
       </nav>
     </footer>
+    <script type="module" src="main.js"></script>
   </body>
 </html>

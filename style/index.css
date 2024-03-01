@@ -1,3 +1,4 @@
+@charset "UTF-8";
 span {
   font-family: "Chronicle Display", sans-serif;
   font-weight: 700;
@@ -208,29 +209,81 @@ header {
   content: "";
 }
 
-.progress-bloc {
+/* .progress-bloc {
   width: 10rem;
   height: 24rem;
   align-items: center;
   justify-content: space-between;
-  border-right: 4px solid rgba(222, 229, 224, 0.55);
+  border-right: 4px solid rgb(222 229 224 / 55%);
   position: fixed;
   top: 29rem;
   right: 4%;
   z-index: 4;
+  overflow: hidden;
+  transition: border-color 0.5s ease-out;
 }
 
-.progress-bloc p,
 .progress-bloc a {
   width: 100%;
   text-align: end;
   padding-right: 5rem;
 }
 
-.progress-bloc:nth-child(2):hover .progress-bloc::after {
+.progress-bloc.active::after {
+  content: "";
+  position: fixed;
+  right: 4%;
+  width: 6px;
+  height: 6rem;
+  background-color: white;
+  animation: height 0.5s ease-out;
+}
+
+
+.progress-bloc a:nth-child(2):active::after {
+
+}
+.progress-bloc a:nth-child(3):active::after {
+
+}
+.progress-bloc a:nth-child(4):active::after {
+
+} */
+.progress-bloc {
+  width: 10rem;
+  height: 24rem;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 4px solid rgba(222, 229, 224, 0.0055);
+  position: fixed;
+  top: 29rem;
+  right: 4%;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.progress-bloc a {
+  width: 100%;
+  text-align: end;
+  padding-right: 5rem;
+  position: relative; /* Ajout de la position relative pour les liens */
+}
+
+.progress-bloc a::after {
   content: "";
   position: absolute;
-  border-right: 6px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6rem;
+  background-color: white;
+  transition: height 0.5s ease-out; /* Transition pour l'animation */
+  opacity: 0; /* Bordure initialement cachée */
+}
+
+.progress-bloc a.active::after {
+  opacity: 1; /* Affichage de la bordure lorsqu'un lien est actif */
 }
 
 main {
