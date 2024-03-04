@@ -71,23 +71,28 @@ h1 {
   color: $accent;
   font-size: $ft-sm;
   flex-basis: 100%;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.6rem;
+  padding-left: 3rem;
+}
+
+h1::before,
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 8rem;
+  height: 2px;
+  background-color: $accent;
+  position: relative;
 }
 
 h1::before {
-  content: "";
-  display: inline-block;
-  width: 6rem;
-  height: 3px;
-  background-color: $accent;
-  position: absolute;
+  right: 3rem;
+  top: -4px;
 }
 
-h2 {
-  @extend %h2-style;
-}
-
-h3 {
-  @extend %h3-style;
+h2::before {
+  top: -9px;
 }
 
 h4 {
@@ -141,7 +146,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 70vh;
+  margin-bottom: 55vh;
 }
 
 .social-media-bloc,
@@ -178,11 +183,11 @@ header {
 }
 
 .proposition-value-bloc p {
-  font-size: $ft-xxxl;
+  font-size: $ft-xxl;
   font-family: $fontFamily-secondary;
   font-weight: $ft-w-sm;
   line-height: 9.5rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .proposition-value-bloc a {
@@ -196,7 +201,8 @@ header {
   margin-top: 4rem;
 }
 
-.arrow-down {
+.arrow-down,
+.arrow-right {
   width: 16px;
   height: 24px;
 }
@@ -284,24 +290,71 @@ section:first-child {
   position: relative;
 }
 
+/*
 article {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20vh;
 }
+ */
+
+article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 10px;
+  margin-bottom: 20vh;
+}
+
+h2,
+h3,
+.article-text,
+article a {
+  grid-column: 1/2;
+  padding-left: 12%;
+}
+
+h2 {
+  grid-row: 2;
+  @extend %h2-style;
+  width: 80%;
+}
+
+h3 {
+  @extend %h3-style;
+  display: inline-block;
+  width: 90%;
+  grid-row: 3/4;
+  margin-bottom: 10px;
+}
 
 .article-text {
   width: 632px;
   height: 160px;
+  grid-row: 4/5;
+  font-weight: 400;
+}
+
+article a {
+  display: block;
+  height: 50px;
+  grid-row: 5/6;
+}
+
+.article-img {
+  grid-column: 2 / 3;
+  grid-row: 1/7;
+  align-self: flex-start;
+  justify-self: end;
 }
 
 .number-article {
   @extend %num-article;
   position: absolute;
+  left: -1.32rem;
 }
 
-h2 {
-  flex-basis: 100%;
+#first-article .number-article {
+  top: 150px;
 }
 
 /* footer {

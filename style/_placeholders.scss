@@ -8,19 +8,21 @@
 
 %num-article {
   font-weight: $ft-w-bold;
-  font-size: 20rem;
+  font-size: 24rem;
   color: $font-transparent;
 }
 
 %h2-style {
-  font-weight: $ft-w-extraBold;
+  font-weight: $ft-w-semiBold;
+  letter-spacing: 0.5rem;
   color: $accent;
 }
 
 %h3-style {
   font-family: $fontFamily-secondary;
-  font-weight: $ft-w-semiBold;
+  font-weight: $ft-w-sm;
   font-size: $ft-xl;
+  line-height: 8rem;
 }
 
 %h4-style {

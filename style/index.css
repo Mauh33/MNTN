@@ -6,19 +6,21 @@ span {
 
 .number-article {
   font-weight: 700;
-  font-size: 20rem;
+  font-size: 24rem;
   color: rgba(255, 255, 255, 0.1803921569);
 }
 
 h2 {
-  font-weight: 800;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
   color: #fbd784;
 }
 
 h3 {
   font-family: "Chronicle Display", sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 6.4rem;
+  line-height: 8rem;
 }
 
 h4 {
@@ -104,15 +106,28 @@ h1 {
   color: #fbd784;
   font-size: 1.8rem;
   flex-basis: 100%;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.6rem;
+  padding-left: 3rem;
+}
+
+h1::before,
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 8rem;
+  height: 2px;
+  background-color: #fbd784;
+  position: relative;
 }
 
 h1::before {
-  content: "";
-  display: inline-block;
-  width: 6rem;
-  height: 3px;
-  background-color: #fbd784;
-  position: absolute;
+  right: 3rem;
+  top: -4px;
+}
+
+h2::before {
+  top: -9px;
 }
 
 article p,
@@ -154,7 +169,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 70vh;
+  margin-bottom: 55vh;
 }
 
 .social-media-bloc,
@@ -192,11 +207,11 @@ header {
 }
 
 .proposition-value-bloc p {
-  font-size: 10rem;
+  font-size: 8.8rem;
   font-family: "Chronicle Display", sans-serif;
   font-weight: 300;
   line-height: 9.5rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .proposition-value-bloc a {
@@ -210,7 +225,8 @@ header {
   margin-top: 4rem;
 }
 
-.arrow-down {
+.arrow-down,
+.arrow-right {
   width: 16px;
   height: 24px;
 }
@@ -298,23 +314,67 @@ section:first-child {
   position: relative;
 }
 
+/*
 article {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20vh;
 }
+ */
+article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 10px;
+  margin-bottom: 20vh;
+}
+
+h2,
+h3,
+.article-text,
+article a {
+  grid-column: 1/2;
+  padding-left: 12%;
+}
+
+h2 {
+  grid-row: 2;
+  width: 80%;
+}
+
+h3 {
+  display: inline-block;
+  width: 90%;
+  grid-row: 3/4;
+  margin-bottom: 10px;
+}
 
 .article-text {
   width: 632px;
   height: 160px;
+  grid-row: 4/5;
+  font-weight: 400;
+}
+
+article a {
+  display: block;
+  height: 50px;
+  grid-row: 5/6;
+}
+
+.article-img {
+  grid-column: 2/3;
+  grid-row: 1/7;
+  align-self: flex-start;
+  justify-self: end;
 }
 
 .number-article {
   position: absolute;
+  left: -1.32rem;
 }
 
-h2 {
-  flex-basis: 100%;
+#first-article .number-article {
+  top: 150px;
 }
 
 /* footer {
