@@ -99,18 +99,18 @@ h4 {
   @extend %h4-style;
 }
 
-article p,
-article a {
+.article-homepage p,
+.article-homepage a {
   font-weight: $ft-w-bold;
 }
 
-article a {
+.article-homepage a {
   color: $accent;
   font-weight: $ft-w-bold;
   height: 30rem;
 }
 
-article img {
+.article-img {
   @extend %article-img;
 }
 
@@ -289,7 +289,7 @@ section:first-child {
   position: relative;
 }
 
-article {
+.article-homepage {
   display: grid;
   grid-template-columns: repeat(10, 10%);
   grid-template-rows: repeat(10, 3.7vw);
@@ -318,14 +318,14 @@ h3 {
   grid-column: 2 / 6;
 }
 
-article a {
+.article-homepage a {
   display: block;
   height: 50px;
   grid-column: 2 / 3;
   grid-row: 9 / 10;
 }
 
-article a,
+.article-homepage a,
 .arrow-right {
   margin-top: 2rem;
 }

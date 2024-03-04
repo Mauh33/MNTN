@@ -29,7 +29,7 @@ h4 {
   font-size: 2.4rem;
 }
 
-article img {
+.article-img {
   width: 56.6rem;
   height: 72rem;
 }
@@ -130,12 +130,12 @@ h2::before {
   top: -9px;
 }
 
-article p,
-article a {
+.article-homepage p,
+.article-homepage a {
   font-weight: 700;
 }
 
-article a {
+.article-homepage a {
   color: #fbd784;
   font-weight: 700;
   height: 30rem;
@@ -313,7 +313,7 @@ section:first-child {
   position: relative;
 }
 
-article {
+.article-homepage {
   display: grid;
   grid-template-columns: repeat(10, 10%);
   grid-template-rows: repeat(10, 3.7vw);
@@ -340,14 +340,14 @@ h3 {
   grid-column: 2/6;
 }
 
-article a {
+.article-homepage a {
   display: block;
   height: 50px;
   grid-column: 2/3;
   grid-row: 9/10;
 }
 
-article a,
+.article-homepage a,
 .arrow-right {
   margin-top: 2rem;
 }
