@@ -54,7 +54,6 @@ html {
   line-height: 1.15;
 }
 
-html,
 body {
   width: 100vw;
   margin: 0;
@@ -171,6 +170,11 @@ header {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 55vh;
+}
+
+.navbar,
+header {
+  max-width: 1760px;
 }
 
 .social-media-bloc,
@@ -409,6 +413,11 @@ main::after {
 
 #first-article .number-article {
   top: 150px;
+}
+
+section,
+footer {
+  max-width: 1462px;
 }
 
 footer {

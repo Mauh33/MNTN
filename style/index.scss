@@ -150,6 +150,11 @@ header {
   margin-bottom: 55vh;
 }
 
+.navbar,
+header {
+  max-width: 1760px;
+}
+
 .social-media-bloc,
 .progress-bloc {
   display: flex;
@@ -388,6 +393,11 @@ main::after {
 
 #first-article .number-article {
   top: 150px;
+}
+
+section,
+footer {
+  max-width: 1462px;
 }
 
 footer {
