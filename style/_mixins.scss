@@ -1,0 +1,19 @@
+@mixin from($media) {
+  @if $media == sm {
+    @media only screen and (max-width: #{$min-sm + 1}) {
+      @content;
+    }
+  } @else if $media == md {
+    @media only screen and (max-width: #{$min-md + 1}) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media only screen and (max-width: #{$min-lg + 1}) {
+      @content;
+    }
+  } @else if $media == xl {
+    @media only screen and (max-width: ($min-xl)) {
+      @content;
+    }
+  }
+}
