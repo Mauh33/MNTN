@@ -31,9 +31,19 @@
   font-size: $ft-md;
 }
 
-%article-img {
+%article-img-xl {
+  width: 76.6rem;
+  height: 92rem;
+}
+
+%article-img-desktop {
   width: 56.6rem;
   height: 72rem;
+}
+
+%article-img-mobile {
+  width: 20rem;
+  height: 36rem;
 }
 
 %linear-style {

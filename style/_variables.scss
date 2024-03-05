@@ -25,3 +25,15 @@ $ft-w-extraBold: 800;
 $title-small-size: 3rem;
 $title-medium-size: 3.5rem;
 $title-big-size: 3.8rem;
+
+$min-sm: 574px;
+$min-md: 990px;
+$min-lg: 1919px;
+$min-xl: false;
+
+$breakpoints: (
+  sm: $min-sm,
+  md: $min-md,
+  lg: $min-lg,
+  xl: $min-xl,
+);
