@@ -3,32 +3,30 @@
 @import "./placeholders";
 
 *,
-*::before,
-*::after {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  min-width: 0;
-  min-height: 0;
 }
 
 html {
   height: 100%;
   font-size: 62.5%;
   line-height: 1.15;
+  margin: 0;
 }
 
 html,
 body {
-  width: 100vw;
-  margin: 0;
+  width: 100%;
 }
 
 body {
+  overflow-x: hidden;
   font-family: $fontFamily-primary;
   font-size: $ft-sm;
   line-height: 1.5;
-  background-image: url("/public/img/Background\ picture\ copy.jpg");
+  background-image: url("../public/img/Background-picture-copy.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 370vh;
@@ -100,21 +98,6 @@ h4 {
   @extend %h4-style;
 }
 
-.article-homepage p,
-.article-homepage a {
-  font-weight: $ft-w-bold;
-}
-
-.article-homepage a {
-  color: $accent;
-  font-weight: $ft-w-bold;
-  height: 30rem;
-}
-
-.article-img {
-  @extend %article-img;
-}
-
 span {
   @extend %font-logo;
 }
@@ -150,8 +133,20 @@ header {
   margin-bottom: 55vh;
 }
 
+header::after {
+  content: "";
+  position: absolute;
+  top: 1040px;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 700px;
+  @extend %linear-style;
+}
+
 .navbar,
 header {
+  width: auto;
   max-width: 1760px;
 }
 
@@ -271,14 +266,17 @@ header {
 
 main {
   background-color: transparent;
-  width: 100vw;
-  left: 0;
+  width: 90vw;
+  margin: auto;
+  height: 260vh;
 }
 
 main::after {
   content: "";
   z-index: 2;
   top: 1549px;
+  left: 0;
+  right: 0;
   width: 100%;
   height: 150px;
   position: absolute;
@@ -295,11 +293,26 @@ main::after {
   position: relative;
 }
 
+.article-homepage p,
+.article-homepage a {
+  font-weight: $ft-w-bold;
+}
+
+.article-homepage a {
+  color: $accent;
+  font-weight: $ft-w-bold;
+  height: 30rem;
+}
+
+.article-img {
+  @extend %article-img;
+}
+
 .article-homepage {
   display: grid;
   grid-template-columns: repeat(10, 10%);
   grid-template-rows: repeat(10, 3.7vw);
-  margin-bottom: 20vh;
+  margin-bottom: 29vh;
 }
 
 .article-title {
@@ -327,8 +340,10 @@ main::after {
 }
 
 .article-text {
-  width: 632px;
-  height: 160px;
+  max-width: 632px;
+  width: max-content;
+  height: max-content;
+  min-height: 160px;
   font-weight: 400;
   grid-row: 7 / 9;
   grid-column: 2 / 6;
@@ -401,7 +416,7 @@ footer {
 }
 
 footer {
-  height: 35vh;
+  height: 29vh;
   width: 72vw;
   display: grid;
   grid-template-columns: repeat(10, 10%);
