@@ -282,8 +282,6 @@ header {
 
 .article-img {
   justify-self: end;
-  // min-width: 56.6rem;
-  // min-height: 72rem;
   max-width: 56.6rem;
   max-height: 72rem;
   grid-column: 8/12;
@@ -516,6 +514,8 @@ h4 {
 
   .article-title {
     grid-column: 2 / 6;
+    font-size: $ft-sm;
+    margin-top: 3rem;
   }
 
   .article-title,
