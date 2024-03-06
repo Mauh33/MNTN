@@ -501,6 +501,9 @@ h4 {
   header::before {
     top: 81vw;
   }
+  .proposition-value-bloc p {
+    margin-bottom: unset;
+  }
   .progress-bloc {
     right: 4vw;
   }
