@@ -522,6 +522,8 @@ h4 {
   }
   .article-title {
     grid-column: 2/6;
+    font-size: 1.8rem;
+    margin-top: 3rem;
   }
   .article-title,
   .section-homepage .article-homepage:nth-child(even) .article-title {
