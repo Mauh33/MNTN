@@ -1,47 +1,47 @@
-let progressBloc = document.querySelector(".progress-bloc");
+const progressBloc = document.querySelector(".progress-bloc");
+const progressionAnchors = document.querySelectorAll(".progress-bloc a");
 
 function calculateScrollPercentage() {
-  let scrollTop = window.scrollY;
-  let windowHeight = window.innerHeight;
-  let fullHeight = document.body.clientHeight;
-
-  const percentageScrolled = (scrollTop / (fullHeight - windowHeight)) * 100;
-
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const fullHeight = document.body.scrollHeight;
+  const visibleHeight = fullHeight - windowHeight;
+  const percentageScrolled = 100 * (scrollTop / visibleHeight);
   return percentageScrolled;
 }
 
+function animateProgression(scrollPercentage) {
+  progressBloc.classList.remove("active", "one", "two", "three", "four");
+
+  if (scrollPercentage <= 25) {
+    progressBloc.classList.add("active", "one");
+  } else if (scrollPercentage <= 50) {
+    progressBloc.classList.add("active", "two");
+  } else if (scrollPercentage <= 75) {
+    progressBloc.classList.add("active", "three");
+  } else {
+    progressBloc.classList.add("active", "four");
+  }
+}
+
 window.addEventListener("scroll", function () {
-  let scrollPercentage = calculateScrollPercentage();
-  console.log(
-    "pourcentage de scroll par rapport à la hauteur de la page",
-    scrollPercentage
-  );
-  return scrollPercentage;
+  const scrollPercentage = calculateScrollPercentage();
+  animateProgression(scrollPercentage);
 });
 
-document.querySelectorAll(".progress-bloc a").forEach(anchor => {
+progressionAnchors.forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
-
-    document.querySelectorAll(".progress-bloc a").forEach(element => {
+    progressionAnchors.forEach(element => {
       element.classList.remove("active");
     });
 
     this.classList.add("active");
 
     let index = Array.from(this.parentNode.children).indexOf(this);
+    console.log("index", index);
 
-    progressBloc.classList.remove("active", "one", "two", "three", "four");
-
-    if (index === 0 || scrollPercentage <= 24) {
-      progressBloc.classList.add("active", "one");
-    } else if (index === 1 || scrollPercentage <= 49) {
-      progressBloc.classList.add("active", "two");
-    } else if (index === 2 || scrollPercentage <= 74) {
-      progressBloc.classList.add("active", "three");
-    } else if (index === 3 || scrollPercentage <= 99) {
-      progressBloc.classList.add("active", "four");
-    }
+    animateProgression(index * 25);
 
     document.querySelector(this.getAttribute("href")).scrollIntoView({
       behavior: "smooth",
@@ -49,5 +49,3 @@ document.querySelectorAll(".progress-bloc a").forEach(anchor => {
     });
   });
 });
-
-function animateProgressbar() {}
