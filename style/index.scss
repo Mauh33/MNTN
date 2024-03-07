@@ -281,29 +281,19 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 98vh;
+  margin-bottom: 132vh;
 }
 
 .article-img {
   justify-self: end;
   max-width: 56.6rem;
   max-height: 72rem;
-  grid-column: 8/12;
-  grid-row: 1 / span 7;
 }
 
 main {
   background-color: transparent;
-  width: 90vw;
+  width: 50vw;
   max-width: 1700px;
-  margin: auto;
-}
-
-.section-homepage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin: auto;
 }
 
@@ -313,39 +303,34 @@ main {
 }
 
 .article-homepage {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5.05vw, 12%));
-  grid-template-rows: repeat(auto-fit, minmax(6vw, 50%));
   margin-bottom: 20rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-text-bloc {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .article-title {
-  grid-column: 2 / 6;
+  flex-basis: 100%;
 }
 
-.article-title,
-.section-homepage .article-homepage:nth-child(even) .article-title {
-  grid-row: 2 / 3;
+.section-homepage .article-homepage:nth-child(2) {
+  flex-direction: row-reverse;
 }
 
-.section-homepage .article-homepage:nth-child(even) .article-title {
-  grid-column: 7/11;
+.section-homepage .article-homepage:nth-child(2) .article-text-bloc {
+  padding-left: 30rem;
 }
 
 .article-subtitle {
-  display: inline-block;
   margin-bottom: 10px;
   margin-top: unset;
-  grid-column: 2 / 6;
-}
-
-.article-subtitle,
-.section-homepage .article-homepage:nth-child(even) .article-subtitle {
-  grid-row: 3 / 4;
-}
-
-.section-homepage .article-homepage:nth-child(even) .article-subtitle {
-  grid-column: 7/11;
 }
 
 .article-text {
@@ -354,16 +339,6 @@ main {
   height: max-content;
   min-height: 160px;
   font-weight: 400;
-  grid-column: 2 / 6;
-}
-
-.article-text,
-.section-homepage .article-homepage:nth-child(even) .article-text {
-  grid-row: 4 / 5;
-}
-
-.section-homepage .article-homepage:nth-child(even) .article-text {
-  grid-column: 7/11;
 }
 
 .article-homepage p,
@@ -373,58 +348,61 @@ main {
 
 .article-homepage a {
   color: $accent;
-  display: block;
-  height: 50px;
-  grid-column: 2 / 3;
+  display: inline-block;
+  text-decoration: none;
+  width: 20rem;
+  flex-basis: 100%;
 }
 
-.article-homepage a,
-.arrow-right,
-.section-homepage .article-homepage:nth-child(even) a,
-.section-homepage .article-homepage:nth-child(even) .arrow-right {
-  grid-row: 5/6;
+.arrow {
+  display: inline-block;
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  border-right: 3px solid #fbd784;
+  border-bottom: 3px solid #fbd784;
+  transform: rotate(-45deg) translate(3px, 13px);
+  margin-left: 20px;
 }
 
-.section-homepage .article-homepage:nth-child(even) a {
-  grid-column: 7/8;
-}
-
-.section-homepage .article-homepage:nth-child(even) .arrow-right {
-  grid-column: 8/9;
+.arrow::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-14px) rotate(-135deg);
+  width: 30px;
+  height: 3px;
+  background-color: $accent;
 }
 
 .article-homepage a,
 .arrow-right {
-  grid-row: 5 / 6;
   margin-top: 2rem;
 }
 
 .arrow-right {
   width: 30px;
   height: 20px;
-  grid-column: 3/4;
 }
 
 .section-homepage .article-homepage:nth-child(even) .article-img {
-  grid-column: 1/6;
   justify-self: baseline;
 }
 
 .section-homepage .article-homepage:nth-child(odd) .number-article {
-  left: 1vw;
+  left: -5vw;
 }
 
 .section-homepage .article-homepage:nth-child(2) .number-article {
   top: 35%;
-  right: 39%;
+  right: 36%;
 }
 
 .section-homepage .article-homepage:nth-child(3) .number-article {
-  top: 68%;
+  top: 73%;
 }
 
 #first-article .number-article {
-  top: 150px;
+  top: 30%;
 }
 
 footer {
@@ -444,7 +422,7 @@ h4 {
 }
 
 .mntn-copyright-bloc {
-  grid-column: 2/5;
+  grid-column: 1/5;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -505,8 +483,6 @@ h4 {
   }
 
   .article-homepage {
-    grid-template-columns: repeat(10, 10%);
-    grid-template-rows: repeat(10, 3.7vw);
     width: 100%;
   }
 
@@ -580,6 +556,10 @@ h4 {
 
   .article-img {
     grid-column: 7/11;
+    min-height: 52rem;
+    min-width: 36.6rem;
+    width: 100%;
+    height: max-content;
   }
 
   .mntn-copyright-bloc {
@@ -598,7 +578,7 @@ h4 {
     width: 76vw;
   }
 }
-
+/*
 @include from(md) {
   .navbar,
   header,
@@ -647,4 +627,4 @@ h4 {
     min-width: unset;
     min-height: unset;
   }
-}
+} */
