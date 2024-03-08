@@ -494,12 +494,12 @@ h4 {
     right: 4vw;
   }
   main {
-    max-width: 1462px;
-    width: 100%;
+    width: calc(100vw - 36rem);
   }
   section,
   footer {
     max-width: 1462px;
+    margin: auto;
   }
   .article-homepage {
     width: 100%;
@@ -651,5 +651,12 @@ h4 {
     margin: unset;
     padding-right: 5rem;
     width: auto;
+  }
+  .blog-footer-bloc {
+    padding-left: unset;
+    grid-column: 6/8;
+  }
+  .infos-mntn-bloc {
+    margin-left: unset;
   }
 }/*# sourceMappingURL=index.css.map */
